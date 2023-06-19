@@ -10,16 +10,19 @@ const LoginPage = () => {
             <Grid style={{ display: 'flex', flexDirection: 'column',justifyContent:'space-between', width: '400px', height: '170px', margin: 'auto', padding: '20px' }}>
                 <Typography variant="h3">Sign In </Typography>
                 <Typography variant="subtitle2">Sign in to your account</Typography>
-                <GoogleOAuthProvider clientId="your_client_id">
-                    <GoogleLogin
+                <GoogleOAuthProvider clientId="508709760476-ten8i0nq5l3sa8h6uuvqkih4bkap51re.apps.googleusercontent.com">
+                     <GoogleLogin
                         onSuccess={credentialResponse => {
-                            console.log(credentialResponse);
+                         console.log(credentialResponse);
                         }}
                         onError={() => {
                             console.log('Login Failed');
-                        }}
+                        }}   
                     />
-                </GoogleOAuthProvider>
+                 </GoogleOAuthProvider>
+      
+    
+                    
             </Grid>
             <Paper elevation={3} style={{
                 display: 'flex', flexDirection: 'column', width: '400px', justifyContent: 'space-around',
@@ -41,7 +44,7 @@ const LoginPage = () => {
                     autoComplete="current-password"
                 />
                 <Typography component={Link} to={''} style={{ textDecoration: 'none' }}>Forget Password ?</Typography>
-                <Button variant="contained">Sign In</Button>
+                <Button variant="contained" >Sign In</Button>
                 <Typography>Don`t have any account ? Register here</Typography>
             </Paper>
 
